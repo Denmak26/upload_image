@@ -1,0 +1,5 @@
+<%= link_to 'All posts', posts_path %>
+<h1><%= @post.title %></h1>
+<%= image_tag(@post.image.url, srcset: "#{@post.image.phone.url} 640w, #{@post.image.tablet.url} 920w, #{@post.image.computer.url} 1280w") if @post.image? %>
+<p><%= @post.body %></p>
+<p><%= link_to 'Edit', edit_post_path(@post) %></p>
